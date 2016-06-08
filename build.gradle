@@ -1,0 +1,37 @@
+group 'com.ttc'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.7'
+    compile group: 'ch.qos.logback', name: 'logback-core', version: '1.1.7'
+    compile group: 'org.codehaus.janino', name: 'janino', version: '2.7.8'
+
+    compile(
+            'us.codecraft:webmagic-core:0.5.3',
+            'us.codecraft:webmagic-extension:0.5.3',
+            'org.slf4j:slf4j-log4j12:1.7.21',
+            'commons-logging:commons-logging:1.2',
+            'org.springframework:spring-aop:4.2.4.RELEASE',
+            'org.springframework:spring-beans:4.2.4.RELEASE',
+            'org.springframework:spring-context:4.2.5.RELEASE',
+            'org.springframework:spring-core:4.2.4.RELEASE',
+            'org.springframework:spring-expression:4.2.4.RELEASE',
+            'org.springframework:spring-web:4.2.4.RELEASE',
+            'org.springframework:spring-webmvc:4.2.4.RELEASE',
+            'org.springframework.data:spring-data-redis:1.7.1.RELEASE',
+            'redis.clients:jedis:2.8.1'
+
+
+    )
+}
